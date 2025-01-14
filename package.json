@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "mongose": "^0.0.2-security"
+  },
+  "name": "s72_dhruv_malviya_the_worst_pizza_places_in_town",
+  "version": "1.0.0",
+  "description": "This project enables people to share their experiences and rate the worst pizza places in town. Users can log in, create reviews, and vote on different pizza spots based on humorous and quirky criteria like \"worst cheese-to-crust ratio\" or \"most disappointing toppings.\" The goal is to create a fun yet informative platform where users can share their bad pizza experiences with others.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
