@@ -46,9 +46,5 @@ By building this project, I aim to:
 - Strengthen my understanding of MongoDB for managing complex data.
 - Implement security features like password hashing and token-based authentication.
 - Gain experience with deploying applications to platforms like Netlify and Heroku.
+  
 
-The humorous theme of the project keeps it engaging and fun to develop, while offering a valuable opportunity to build a practical, full-stack application.
-
----
-
-### Let’s make the worst pizza places a little more famous—and a lot more fun!
