@@ -1,18 +1,11 @@
-// Importing the Express module
 const express = require('express');
-
-// Creating an instance of Express
 const app = express();
+const port = 3000;
 
-// Defining a port number
-const PORT = process.env.PORT || 3000;
-
-// Defining the /ping route
-app.get('/ping', (req, res) => {
-    res.send('Pong!');
+app.get('/greet', (req, res) => {
+  res.send('Welcome to the Worst pizza places!');
 });
 
-// Starting the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
