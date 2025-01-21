@@ -9,7 +9,6 @@ const PORT = 3000;
 
 // Defining the /ping route
 app.get('/ping', (req, res) => {
-    console.log(req.query);
     res.send('Pong!');
 });
 
