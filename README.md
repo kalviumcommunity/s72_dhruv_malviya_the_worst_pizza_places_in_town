@@ -46,5 +46,8 @@ By building this project, I aim to:
 - Strengthen my understanding of MongoDB for managing complex data.
 - Implement security features like password hashing and token-based authentication.
 - Gain experience with deploying applications to platforms like Netlify and Heroku.
+
+---
+Deployment Link: https://asap-dqz.pages.dev/
   
 
