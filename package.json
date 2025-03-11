@@ -2,7 +2,7 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.9.5",
+    "mongoose": "^8.12.1",
     "mongose": "^0.0.2-security"
   },
   "name": "s72_dhruv_malviya_the_worst_pizza_places_in_town",
