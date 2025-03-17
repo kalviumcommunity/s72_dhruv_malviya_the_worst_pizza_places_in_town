@@ -1,39 +1,39 @@
-// routes.js (functioning as server.js)
-require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const pizzaPlaceRoutes = require('./routes/pizzaPlaceRoutes');
-const authRoutes = require('./routes/auth');
+const dotenv = require('dotenv');
 
-// Initialize Express
+// Load environment variables
+dotenv.config();
+
+// Create Express app
 const app = express();
-
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/worst-pizza-place', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(() => console.log('MongoDB Connected'))
-.catch(err => {
-    console.error('MongoDB connection error:', err.message);
-    // Exit process with failure
-    process.exit(1);
-});
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Routes
-app.use('/api', pizzaPlaceRoutes);
-app.use('/api/auth', authRoutes);
+// Database connection
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('Connected to MongoDB'))
+.catch((err) => console.error('MongoDB connection error:', err));
+
+// Routes (to be implemented)
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/pizza-places', require('./routes/pizzaPlaces'));
+app.use('/api/reviews', require('./routes/reviews'));
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something went wrong!');
+  console.error(err.stack);
+  res.status(500).json({ message: 'Something went wrong!' });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+}); 
