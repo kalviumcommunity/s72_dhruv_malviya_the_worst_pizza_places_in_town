@@ -48,3 +48,4 @@ By building this project, I aim to:
 - Gain experience with deploying applications to platforms like Netlify and Heroku.
   
 
+CloudFlare : https://s72-dhruv-malviya-the-worst-pizza-places-in-town.pages.dev/
