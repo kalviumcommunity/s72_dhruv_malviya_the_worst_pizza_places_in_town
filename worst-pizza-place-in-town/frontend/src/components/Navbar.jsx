@@ -50,7 +50,7 @@ const Navbar = () => {
           )}
         </Flex>
       </Flex>
-    </Box>
+    </Box> 
   );
 };
 
