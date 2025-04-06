@@ -94,7 +94,7 @@ const Home = () => {
           {filteredPlaces.map(place => (
             <PizzaPlaceCard key={place._id} pizzaPlace={place} />
           ))}
-        </SimpleGrid>
+        </SimpleGrid> 
       )}
     </Container>
   );
