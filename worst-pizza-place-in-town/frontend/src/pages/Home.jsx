@@ -17,7 +17,7 @@ const Home = () => {
         const response = await axios.get('/api/pizza-places');
         setPizzaPlaces(response.data);
         setFilteredPlaces(response.data);
-        setLoading(false);
+        setLoading(false); 
       } catch (error) {
         setError('Failed to fetch pizza places');
         setLoading(false);
