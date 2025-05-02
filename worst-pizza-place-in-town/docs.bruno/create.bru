@@ -1,0 +1,29 @@
+meta {
+  name: create
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/pizza-places
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+       {
+         "name": "New Pizza Place",
+         "address": "789 New St",
+         "description": "A new place for pizza",
+         "ratings": {
+           "cheeseToCrustRatio": 4,
+           "toppingDisappointment": 2,
+           "sauceQuality": 3,
+           "overallExperience": 4
+         }
+       }
+}
